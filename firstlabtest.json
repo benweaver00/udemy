@@ -1,0 +1,16 @@
+exports.first = function(event,context){
+
+console.log('FROM CONSOLE');
+
+let a = 5;
+let b = 10;
+
+const c = a + b;
+
+
+if (c == 15) {
+context.done(null, c);
+} else {
+context.done('some error');
+}
+};

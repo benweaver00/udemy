@@ -1,0 +1,30 @@
+//what is context? (Don't use 'function' here)
+exports.first = (event,context) => {
+console.log(context)
+};
+
+/*
+Response:
+null
+
+Request ID:
+"4ccd9e86-35a8-4832-9e73-d55568144266"
+
+Function Logs:
+START RequestId: 4ccd9e86-35a8-4832-9e73-d55568144266 Version: $LATEST
+2019-06-25T20:17:43.273Z	4ccd9e86-35a8-4832-9e73-d55568144266	{ callbackWaitsForEmptyEventLoop: [Getter/Setter],
+  done: [Function: done],
+  succeed: [Function: succeed],
+  fail: [Function: fail],
+  logGroupName: '/aws/lambda/first',
+  logStreamName: '2019/06/25/[$LATEST]269dec99d2714bf292a0d59d88d52f11',
+  functionName: 'first',
+  memoryLimitInMB: '128',
+  functionVersion: '$LATEST',
+  getRemainingTimeInMillis: [Function: getRemainingTimeInMillis],
+  invokeid: '4ccd9e86-35a8-4832-9e73-d55568144266',
+  awsRequestId: '4ccd9e86-35a8-4832-9e73-d55568144266',
+  invokedFunctionArn: 'arn:aws:lambda:us-east-1:365313998181:function:first' }
+END RequestId: 4ccd9e86-35a8-4832-9e73-d55568144266
+REPORT RequestId: 4ccd9e86-35a8-4832-9e73-d55568144266	Duration: 49.41 ms	Billed Duration: 100 ms 	Memory Size: 128 MB	Max Memory Used: 57 MB	
+*/

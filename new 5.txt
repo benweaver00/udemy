@@ -1,0 +1,17 @@
+exports.first = function(event,context,callback){
+
+context.callbackWaitsForEmptyEventLoop = false;  
+//by default this is set to true
+
+setTimeout(function() {
+	console.log('Hello World');
+	}, 10000);
+	
+	callback(null, 'I am done');
+	
+	};
+	//context.callbackWaitsForEmptyEventLoop = true; is the default value
+	//set context.callbackWaitsForEmptyEventLoop = false;  means
+	//the function returns the callback without regard to the rest of the
+	//execution of the function.  This includes timeout.  In this situation
+	//the timeout period does not cause the function to crash

@@ -1,0 +1,8 @@
+//the code outside of the function continues to retain its contents in memory
+//for a certain amount of time after the function completes until the values
+//are reset.
+
+let i = 1;
+exports.handler = (event, context) => {
+	console.log(i++);
+};

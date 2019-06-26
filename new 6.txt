@@ -1,0 +1,59 @@
+//4 kinds of returns for a Lambda function
+// 1. return nothing
+
+exports.first = function(event,context,callback){
+};
+//output
+//null
+//doesn't need any parameters to return nothing.
+exports.first = function(){
+};
+//output
+//null
+//returns null to whatever event executed that function
+
+// 2. return errors  multiple ways (return a string, stack trace, )
+
+exports.first = function(event, context, callback){
+	callback('some error');
+};
+//err comes with a stack trace
+exports.first = function(event, context, callback){
+callback(new Error("some error"));
+};
+//output
+/*
+Response:
+{
+  "errorMessage": "some error",
+  "errorType": "Error",
+  "stackTrace": [
+    "exports.first (/var/task/index.js:3:10)"
+  ]
+}
+/*
+//error object returned shows line #3 position 10 'n'
+
+//3.  return data (numeric, string, etc)
+//numeric
+exports.first = function(event,context){
+console.log('FROM CONSOLE');
+let a = 5;
+let b = 10;
+const c = a + b;
+if (c == 15) {
+context.done(null, c);
+} else {
+context.done('some error');
+}
+};
+//string
+exports.first = function(event,context,callback){
+	console.log('Hello World');
+	callback(null, 'I am done');
+	};
+//encapsulated object 
+exports.first = function(event,context,callback){
+	console.log('Hello World');
+	callback(null, {"key": 'I am done'});
+	};

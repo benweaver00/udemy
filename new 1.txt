@@ -1,0 +1,8 @@
+exports.handler = (event, context) => {
+
+setTimeout(function() {
+	console.log(context.getRemainingTimeInMillis());
+	}, 3000);
+	
+	console.log(context);
+};

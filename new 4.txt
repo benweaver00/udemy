@@ -1,0 +1,12 @@
+exports.first = function(event,context,callback){
+
+context.callbackWaitsForEmptyEventLoop = false;  
+//by default this is set to true
+
+setTimeout(function() {
+	console.log('Hello World');
+	}, 10000);
+	
+	callback(null, 'I am done');
+	
+	};
