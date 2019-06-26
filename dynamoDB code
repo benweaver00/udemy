@@ -3,7 +3,8 @@
     "id": 1,
     "name": "Jake",
     "age":20
-  },{
+  },
+  {
     "id": 1,
     "name": "Emily",
     "age":21
@@ -17,4 +18,5 @@
     "id": 1,
     "name": "Daniel",
     "age":25
-  },
+  }
+]
