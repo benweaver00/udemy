@@ -4,5 +4,6 @@ setTimeout(function() {
 }, 3000)
 };
 
+We set the max runtime to 3 seconds.  See the
 function times out after 3 seconds (Duration: 3003.22 ms	
 Billed Duration: 3000 ms 	Memory Size: 128 MB	Max Memory Used: 57 MB)
